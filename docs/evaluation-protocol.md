@@ -18,3 +18,11 @@
 - Runtime: end-to-end latency, throughput, VRAM/RAM.
 
 Report per-game scores and unweighted game-level macro averages, confidence intervals, sample counts, game versions, thresholds and failures. Targets are not results. A game is supported only for tested configurations. UNKNOWN is valid when evidence is insufficient.
+
+
+## Audio and multimodal evaluation
+- Audio event detection: event-based precision/recall/F1, onset/offset error, class-wise AP and false alarms per minute.
+- Speech: WER/CER, VAD miss/false alarm, diarization error only when speaker identity is a task.
+- Audio-visual association: matched-event precision/recall, timestamp alignment error and unmatched-event rate.
+- Robustness: game mix, music/effects volume, voice chat, language, sample rate, codec, mono/stereo/spatial audio, compression, background noise and overlapping events.
+- Compare audio-only, video-only and fused systems on identical held-out games and clips. Report modality ablations and missing-modality performance.
