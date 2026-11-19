@@ -29,3 +29,10 @@ Hold out complete games for primary cross-game evaluation. Also hold out capture
 ```
 
 Use lawful captures. Do not redistribute game footage or third-party data unless the license allows it. Preserve source and license metadata.
+
+
+## Audio assets and annotations
+
+Record audio asset ID, source game/version/mode, capture method, sample rate, channel count/layout, codec, bit depth where known, duration, loudness/clipping checks, language, audio settings, capture session, timestamp origin and synchronization offset to video. Preserve the original waveform; store derived resampled/mono copies as reproducible transforms.
+
+Annotate event class, start/end time, confidence/ambiguity, overlapping events, source attribution only when visually/audio-evidentially supported, and whether the label is audio-observable. Keep game-state truth and controller input separate from audible evidence. Split by complete game and capture session to avoid soundtrack/level leakage.
