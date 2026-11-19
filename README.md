@@ -92,3 +92,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Contributions should include reproducibl
 ## License
 
 Apache-2.0. This license applies to original project code and documentation. It does not relicense third-party game assets, datasets, pretrained weights, or dependencies.
+
+## Audio and multimodal perception
+
+GUP is not limited to screenshots or video. Audio is a first-class input modality. The roadmap expands the catalogue with audio event recognition, gunshot/reload cues, footsteps and movement, ability/UI sound cues, speech/transcription, enemy vocalizations, music-state analysis and audio-visual event association. See [audio perception plan](docs/audio-perception.md). Audio models must be evaluated across game mixes, languages, codecs, spatial audio and sound settings; sound cues are not guaranteed to be unique or present in every title.
