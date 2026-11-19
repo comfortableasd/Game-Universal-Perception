@@ -31,3 +31,19 @@ Applicability is a research hypothesis, not a support claim. A title is supporte
 - M06 detects visible firing, not hidden trigger input.
 - M08 first-person hand actions and third-person full-body actions are separate evaluation domains.
 - M20 handles world-anchored UI; M01 handles screen HUD.
+
+
+## Audio model extensions
+
+| ID | Model | Main game families | Example tasks | Primary approach |
+|---|---|---|---|---|
+| A01 | Audio Event Recognition | all genres | classify game sound events and soundscapes | log-mel + audio encoder / event classifier |
+| A02 | Gunshot & Reload Audio | FPS, TPS, survival shooters | detect shots, bursts, reload and empty-fire sounds | event detection + temporal localization |
+| A03 | Footstep & Movement Audio | FPS, TPS, horror, survival | footsteps, running, jumping, landing, surface/material | audio event model + temporal classifier |
+| A04 | Ability & UI Sound | RPG, MOBA, MMO, action | skill activation, cooldown-ready cues, warnings, menu/UI sounds | audio embeddings + event classifier |
+| A05 | Speech & Dialogue Audio | RPG, narrative, MMO, sports | speech activity, transcription, speaker turns, language | ASR + VAD + diarization where justified |
+| A06 | Enemy & Creature Audio | horror, FPS, survival, action | growls, roars, enemy alerts, creature classes | sound event classification + temporal detection |
+| A07 | Music & Game-State Audio | rhythm, sports, racing, action | music segments, intensity, transitions, beat/onset | music/audio event analysis |
+| A08 | Audio-Visual Event Association | FPS, TPS, racing, rhythm, all multimodal titles | associate audible events with visible firing, impacts, UI cues and events | synchronized audio-video encoder / late fusion |
+
+These are extensions to the original 20 visual models, not claims of completed implementation. See [audio perception plan](audio-perception.md).
