@@ -25,3 +25,21 @@ For events, define clip length, stride, frame rate and event boundaries. Compare
 
 ## Runtime
 Schedule only relevant models, cache shared features, and report end-to-end latency and memory rather than isolated model latency.
+
+
+## Audio and multimodal path
+
+```text
+Audio waveform + sample-rate/channel metadata
+  -> resampling / channel policy / loudness and clipping checks
+  -> log-mel or waveform representation
+  -> audio encoder + event/ASR heads
+  -> temporal event boundaries and confidence
+
+Synchronized RGB + audio (when available)
+  -> visual events + audio events
+  -> timestamp alignment / cross-modal association
+  -> calibrated fusion with modality-specific UNKNOWN states
+```
+
+Audio must not be treated as an optional feature hidden inside a video model. Preserve original timestamps, sample rate, channel layout and synchronization offset. Evaluate audio-only, video-only and fused systems separately. Candidate audio encoders include general audio event and contrastive audio-text models; ASR systems are separate components. Model and dataset licenses must be checked before use.
