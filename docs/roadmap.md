@@ -10,3 +10,13 @@
 | P5 | 21–24 | M19 Warning, M20 Spatial UI, runtime integration | Regression suite and compatibility matrix |
 
 These are proposed planning windows, not delivery guarantees. A title is supported only after a named game/version/configuration passes the published protocol.
+
+
+## Audio workstream (parallel extension)
+
+- A01 Audio Event Recognition and A02 Gunshot/Reload Audio: initial baselines.
+- A03 Footstep/Movement and A04 Ability/UI Sound.
+- A05 Speech/Dialogue Audio and A06 Enemy/Creature Audio.
+- A07 Music/Game-State Audio and A08 Audio-Visual Event Association.
+
+Do not claim multimodal improvement unless the same held-out-game benchmark compares audio-only, video-only and fused systems.
