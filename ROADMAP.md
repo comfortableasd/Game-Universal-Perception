@@ -10,3 +10,8 @@
 | P5 | 21–24 | M19 Warning, M20 Spatial UI, runtime integration | Regression suite and compatibility matrix |
 
 These are proposed planning windows, not performance or delivery guarantees. A title is supported only after a named game/version/configuration passes its published evaluation protocol.
+
+
+## Audio expansion
+
+After the visual baseline is stable, add A01–A08 as a parallel workstream: begin with A01 sound-event recognition and A02 gunshot/reload audio; then footsteps, ability/UI cues, speech, creature sounds, music-state analysis and synchronized audio-visual association. Keep audio-only and fused results separate.
