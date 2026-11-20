@@ -26,3 +26,9 @@ Report per-game scores and unweighted game-level macro averages, confidence inte
 - Audio-visual association: matched-event precision/recall, timestamp alignment error and unmatched-event rate.
 - Robustness: game mix, music/effects volume, voice chat, language, sample rate, codec, mono/stereo/spatial audio, compression, background noise and overlapping events.
 - Compare audio-only, video-only and fused systems on identical held-out games and clips. Report modality ablations and missing-modality performance.
+
+## Independent task-model evaluation
+
+Every model must be evaluated independently against its own ontology. Report per-game results and game-level macro averages. Do not hide a weak task behind a combined multi-task score. If encoders are shared experimentally, report both shared and independent baselines and all task-specific regressions.
+
+For audio models, report audio-only metrics separately. For A13, compare audio-only, visual-only and fused predictions on the exact same held-out clips.
