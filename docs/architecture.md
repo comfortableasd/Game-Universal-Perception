@@ -43,3 +43,9 @@ Synchronized RGB + audio (when available)
 ```
 
 Audio must not be treated as an optional feature hidden inside a video model. Preserve original timestamps, sample rate, channel layout and synchronization offset. Evaluate audio-only, video-only and fused systems separately. Candidate audio encoders include general audio event and contrastive audio-text models; ASR systems are separate components. Model and dataset licenses must be checked before use.
+
+## Model independence policy
+
+GUP is task-specialized and game-generalizing. One model specification corresponds to one narrowly scoped recognition task. Do not combine unrelated labels/tasks into a single multi-task model solely to reduce model count. Shared pretrained encoders, feature caches, data tooling and evaluation infrastructure are permitted; task-specific heads, checkpoints, thresholds and acceptance reports remain independent by default. Any parameter sharing must be justified by controlled ablations demonstrating no material regression in each task's per-game performance.
+
+Audio task models follow the same policy: A02 gunshot audio and A03 reload audio are separate models, just as visual shooting and reload recognition remain separate.
