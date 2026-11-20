@@ -7,3 +7,7 @@
 - 按游戏/会话/视频片段划分数据，禁止相邻帧跨 train/test 泄漏。
 - PR 应包含复现命令、测试结果、逐游戏指标和失败案例。
 - 明确区分实测结果与目标指标；不得从随机帧划分推断跨游戏泛化。
+
+- Keep one model directory scoped to one recognition task. Do not merge unrelated tasks to reduce model count.
+- Shared encoders and utilities are welcome, but submit per-task ablations proving no single-task regression before proposing parameter sharing.
+- Keep audio models independently labeled and evaluated; A02 gunshot and A03 reload audio are separate tasks.
