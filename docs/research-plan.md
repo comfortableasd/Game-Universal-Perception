@@ -15,3 +15,10 @@ Taxonomy; visual representation; temporal modeling; data provenance and annotati
 
 ## Experimental discipline
 Record dataset version, game/version, split, input resolution, model/checkpoint hash, preprocessing, thresholds, hardware and software. Targets are not results. Never claim universal accuracy from a finite benchmark.
+
+## Model design principle
+
+Each Universal Model is a dedicated single-task model with its own ontology, training configuration, checkpoint, evaluation report and supported-game list. The goal is maximum generalization across games for that one task. Shared pretrained encoders and engineering components are allowed, but task-specific parameters remain independent unless experiments demonstrate that sharing does not reduce single-task performance.
+
+## Audio workstream
+Audio is a first-class modality with independently scoped A01–A13 models. Evaluate audio-only, visual-only and audiovisual association separately. Do not merge gunshot and reload audio into one task model.
