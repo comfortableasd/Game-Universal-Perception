@@ -96,3 +96,11 @@ Apache-2.0. This license applies to original project code and documentation. It 
 ## Audio and multimodal perception
 
 GUP is not limited to screenshots or video. Audio is a first-class input modality. The roadmap expands the catalogue with audio event recognition, gunshot/reload cues, footsteps and movement, ability/UI sound cues, speech/transcription, enemy vocalizations, music-state analysis and audio-visual event association. See [audio perception plan](docs/audio-perception.md). Audio models must be evaluated across game mixes, languages, codecs, spatial audio and sound settings; sound cues are not guaranteed to be unique or present in every title.
+
+## Independent-model principle
+
+Each model represents one narrowly defined recognition task and is trained, evaluated, versioned and released independently. Cross-game generalization is pursued within that task; unrelated tasks must not be merged merely to reduce model count. Encoders, data tooling and evaluation infrastructure may be shared, but task heads/checkpoints remain independent unless controlled ablations show no loss in task performance.
+
+## Audio model catalogue
+
+Audio is a first-class modality. The project now specifies 13 independent audio models (A01–A13), including sound-event classification, gunshot recognition, reload-sound recognition, footsteps, movement, ability sounds, UI sounds, speech, creature vocalizations, ambience, music, source direction and audio-visual event association. See [audio model catalogue](audio/README.md) and [audio research plan](docs/audio-perception.md).
